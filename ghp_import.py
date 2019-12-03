@@ -174,7 +174,7 @@ def run_import(git, srcdir, opts):
     for path, dnames, fnames in os.walk(srcdir, followlinks=opts.followlinks):
         for fn in fnames:
             fpath = os.path.join(path, fn)
-            fpath = normalize_path(fpath)
+            #fpath = normalize_path(fpath)
             gpath = gitpath(os.path.relpath(fpath, start=srcdir))
             add_file(pipe, fpath, gpath)
     if opts.nojekyll:
